@@ -8,5 +8,9 @@
   };
   # https://devenv.sh/pre-commit-hooks/
   git-hooks.hooks.prettier.enable = true;
-  git-hooks.hooks.prettier.settings.binPath = ./node_modules/.bin/prettier;
+  git-hooks.hooks.prettier = {
+    settings.binPath = ./node_modules/.bin/prettier;
+    package = null;
+    entry = "./node_modules/.bin/prettier -w";
+  };
 }
